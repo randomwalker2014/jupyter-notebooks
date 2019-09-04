@@ -5,3 +5,5 @@ jupyter_kernel_gateway==2.3.0
 dask==1.2.2
 distributed==1.28.1
 tornado<6.0.0
+numpy==1.11.1
+pandas==0.18.1
