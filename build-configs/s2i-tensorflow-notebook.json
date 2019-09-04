@@ -38,7 +38,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "https://github.com/randomwalker2014/jupyter-on-openshift/jupyter-notebooks",
+                        "uri": "https://github.com/randomwalker2014/jupyter-notebooks",
                         "ref": "2.2.2"
                     },
                     "contextDir": "tensorflow-notebook"
