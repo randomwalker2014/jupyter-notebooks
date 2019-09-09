@@ -30,3 +30,4 @@ beautifulsoup4==4.6.*
 protobuf==3.*
 xlrd==1.2.* 
 mlflow>=1.0
+ipython-sql==0.3.9
