@@ -23,6 +23,3 @@ if os.path.exists(image_config_file):
     with open(image_config_file) as fp:
         exec(compile(fp.read(), image_config_file, 'exec'), globals())
 
-ref_path = os.path.join('/home', 'reference')
-if not os.path.exists(ref_path):
-   os.mkdir(ref_path, 0o777)
