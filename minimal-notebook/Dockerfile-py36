@@ -11,10 +11,6 @@ RUN rm -rf /tmp/src/.git* && \
     rm -rf /tmp/scripts && \
     mv /tmp/src/.s2i/bin /tmp/scripts
     
-RUN jupyter labextension install @jupyterlab/git
-    pip install --upgrade jupyterlab-git
-    jupyter serverextension enable --py jupyterlab_git
-
 USER 1001
 
 LABEL io.k8s.description="S2I builder for custom Jupyter notebooks." \
