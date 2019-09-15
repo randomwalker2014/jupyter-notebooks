@@ -1,5 +1,11 @@
 import os
 
+def create_dir(subdirname):
+    username = c.Session.username
+    data_dir = os.path.join("/home",username,"-workspace",subdirname)
+    if not os.path.exists(data_dir) :
+        os.makedirs(data_dir,0o744)
+        
 port = int(os.environ.get('JUPYTER_NOTEBOOK_PORT', '8080'))
 
 c.NotebookApp.ip = '0.0.0.0'
@@ -22,4 +28,6 @@ image_config_file = '/opt/app-root/src/.jupyter/jupyter_notebook_config.py'
 if os.path.exists(image_config_file):
     with open(image_config_file) as fp:
         exec(compile(fp.read(), image_config_file, 'exec'), globals())
+        
+create_dir("my-junk")
 
