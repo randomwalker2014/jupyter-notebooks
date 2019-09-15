@@ -1,10 +1,12 @@
 import os
 
 def create_dir(subdirname):
+    print("called make dirs")
     username = c.Session.username
     data_dir = os.path.join("/home",username,"-workspace",subdirname)
-    if not os.path.exists(data_dir) :
+    if not os.path.exists(data_dir):
         os.makedirs(data_dir,0o744)
+        print("called make dirs")
         
 port = int(os.environ.get('JUPYTER_NOTEBOOK_PORT', '8080'))
 
