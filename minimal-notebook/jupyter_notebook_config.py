@@ -5,6 +5,7 @@ def create_dir(subdirname):
     print("setting up user environment")
     username = getpass.getuser()
     data_dir = os.path.join("/home","{username}-workspace","{subdirname}")
+    print(data_dir)
     if not os.path.exists(data_dir):
         os.makedirs(data_dir,0o744)
         
