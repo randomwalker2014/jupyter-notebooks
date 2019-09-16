@@ -2,12 +2,11 @@ import os
 import getpass
 
 def create_dir(subdirname):
-    print("setting up user environment")
-    username = getpass.getuser()
-    data_dir = os.path.join("/home","{username}-workspace","{subdirname}")
+    username = os.environ['JUPYTERHUB_USER']
+    data_dir = os.path.join("/home",username + '-workspace',subdirname)
     print(data_dir)
     if not os.path.exists(data_dir):
-        os.makedirs(data_dir,0o744)
+        os.makedirs(data_dir,0o700)
         
 port = int(os.environ.get('JUPYTER_NOTEBOOK_PORT', '8080'))
 
