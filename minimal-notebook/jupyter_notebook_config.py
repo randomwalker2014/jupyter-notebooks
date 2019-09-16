@@ -4,7 +4,6 @@ import getpass
 def create_dir(subdirname):
     username = os.environ['JUPYTERHUB_USER']
     data_dir = os.path.join("/home",username + '-workspace',subdirname)
-    print(data_dir)
     if not os.path.exists(data_dir):
         os.makedirs(data_dir,0o700)
         
